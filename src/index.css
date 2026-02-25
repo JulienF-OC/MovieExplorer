@@ -1,0 +1,4 @@
+body{
+    background: url(../src/assets/background.png);
+    object-fit: cover;
+}
