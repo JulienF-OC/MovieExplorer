@@ -1,0 +1,25 @@
+#Title{
+    margin-top: 65px;
+}
+
+.titleAndDesc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-h1{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.Desc{
+    color: #fff;
+    font-size: 24px;
+    margin-top: -10px;
+    -webkit-text-stroke: -1px #000;
+    font-family: 'Inter', sans-serif;
+}
