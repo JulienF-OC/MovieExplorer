@@ -1,4 +1,19 @@
-body{
-    background: url(../src/assets/background.png);
-    object-fit: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background: url(../src/assets/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
