@@ -7,6 +7,7 @@
   cursor: pointer;
   height: 370px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  justify-content: center;
 
   &:hover {
     transform: translateY(-4px);
@@ -54,6 +55,44 @@
   grid-template-columns: repeat(auto-fill, 200px);
   gap: 1.5rem;
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
+  justify-content: center;
+}
+
+.movie-card--popular {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 200px;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__year {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin: 0;
+  }
 }

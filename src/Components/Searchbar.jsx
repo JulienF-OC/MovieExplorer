@@ -1,30 +1,32 @@
 import "./Searchbar.scss";
 import { Search } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Searchbar = ({ onResults }) => {
+const Searchbar = ({ onResults, resetQuery }) => { 
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  useEffect(() => {
+    setQuery("");
+    setError(null);
+  }, [resetQuery]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!query.trim()) return;
-
     setLoading(true);
     setError(null);
-
     try {
       const apiKey = import.meta.env.VITE_OMDB_API_KEY;
       const response = await fetch(
         `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`
       );
       const data = await response.json();
-
       if (data.Response === "True") {
         onResults(data.Search);
       } else {
-        setError(data.Error); 
+        setError(data.Error);
         onResults([]);
       }
     } catch (err) {
