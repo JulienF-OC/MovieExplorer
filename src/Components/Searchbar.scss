@@ -1,0 +1,52 @@
+#Searchbar-movies{
+    margin-top: 15px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  padding: 0.75rem 1rem;
+  
+  background: #242427;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  gap: 0.5rem;
+
+  .search-icon {
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .search-btn {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    &:hover {
+      background: #ff1f2e;
+    }
+  }
+}
