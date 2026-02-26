@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Title from "./Components/Title";
 import Searchbar from "./Components/Searchbar";
 import MovieCard from "./Components/MovieCard";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const [movies, setMovies] = useState([]);
