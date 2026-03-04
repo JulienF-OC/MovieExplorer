@@ -1,11 +1,11 @@
 import "./MovieCard.scss";
 
-const MovieCard = ({ movie, popular }) => {
+const MovieCard = ({ movie, popular, onClick }) => {
   if (popular) {
     return (
-      // card paysage avec image en fond
       <div
         className="movie-card--popular"
+        onClick={onClick}
         style={{
           backgroundImage: `url(${movie.Poster !== "N/A" ? movie.Poster : "/placeholder.jpg"})`,
         }}
@@ -19,7 +19,7 @@ const MovieCard = ({ movie, popular }) => {
   }
 
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={onClick}>
       <img
         className="movie-card__poster"
         src={movie.Poster !== "N/A" ? movie.Poster : "/placeholder.jpg"}

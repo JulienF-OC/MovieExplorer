@@ -9,17 +9,34 @@
 
 .section-title {
   color: #fff;
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 2rem;
+    background: #e53e3e;
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(229, 62, 62, 0.7);
+    flex-shrink: 0;
+  }
 
   strong {
-    font-weight: 700;
+    font-weight: 900;
+    color: #e53e3e;
   }
 }
 
 .popular-section {
-  padding: 2rem;
+  padding: 3rem 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -31,7 +48,7 @@
 }
 
 .results-section {
-  padding: 2rem;
+  padding: 3rem 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }

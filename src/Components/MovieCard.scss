@@ -16,7 +16,6 @@
 
   &__poster {
     width: 100%;
-    height: 270px;
     object-fit: cover;
     display: block;
     background: #1a1a1a;
@@ -80,7 +79,7 @@
     left: 0;
     right: 0;
     padding: 1rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
   }
 
   &__title {
