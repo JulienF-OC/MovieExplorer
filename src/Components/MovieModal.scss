@@ -9,6 +9,11 @@
   justify-content: center;
   padding: 20px;
   animation: fadeIn 0.2s ease;
+
+  @media (max-width: 480px) {
+    padding: 0;
+    align-items: flex-end;
+  }
 }
 
 .modal {
@@ -26,10 +31,23 @@
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
   animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
+  @media (max-width: 768px) {
+    gap: 24px;
+    padding: 24px;
+  }
+
   @media (max-width: 640px) {
     flex-direction: column;
     padding: 20px;
     gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 20px 20px 0 0;
+    max-height: 92vh;
+    width: 100%;
+    padding: 20px 16px 32px;
+    animation: slideUpMobile 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   &__close {
@@ -57,6 +75,11 @@
 
   &__left {
     flex-shrink: 0;
+
+    @media (max-width: 640px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__poster {
@@ -66,9 +89,19 @@
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 
+    @media (max-width: 768px) {
+      width: 150px;
+      height: 220px;
+    }
+
     @media (max-width: 640px) {
       width: 130px;
       height: 190px;
+    }
+
+    @media (max-width: 480px) {
+      width: 110px;
+      height: 160px;
     }
   }
 
@@ -78,6 +111,10 @@
     flex-direction: column;
     gap: 12px;
     padding-top: 4px;
+
+    @media (max-width: 480px) {
+      gap: 10px;
+    }
   }
 
   &__genres {
@@ -104,12 +141,24 @@
     margin: 0;
     line-height: 1.2;
     letter-spacing: -0.3px;
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 
   &__meta {
     color: #6b7280;
     font-size: 13px;
     margin: 0;
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 
   &__rating {
@@ -155,6 +204,11 @@
     line-height: 1.7;
     font-size: 14px;
     margin: 0;
+
+    @media (max-width: 480px) {
+      font-size: 13px;
+      line-height: 1.6;
+    }
   }
 
   &__details {
@@ -183,6 +237,10 @@
   &__detail-value {
     color: #e5e7eb;
     font-size: 13px;
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -194,4 +252,9 @@
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(24px) scale(0.97); }
   to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes slideUpMobile {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
 }
