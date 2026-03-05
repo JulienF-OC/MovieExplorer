@@ -2,7 +2,7 @@ import "./MovieCard.scss";
 
 const MovieCard = ({ movie, popular, onClick, onToggleFavorite, isFavorite }) => {
   const handleFavoriteClick = (e) => {
-    e.stopPropagation(); // empêche l'ouverture du modal
+    e.stopPropagation(); 
     if (onToggleFavorite) onToggleFavorite(movie);
   };
 
